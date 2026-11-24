@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --canvas: #F8FAFC;
+    --surface-base: #FFFFFF;
+    --surface-muted: #F1F5F9;
+    --ink-primary: #0F172A;
+    --ink-secondary: #64748B;
+    --action-obsidian: #0F172A;
+  }
+
+  body {
+    background-color: var(--canvas);
+    color: var(--ink-primary);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Card styling: Clean, crisp, professional (12px radius, subtle border) */
+.bento-card {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  transition: all 0.15s ease-in-out;
+}
+
+.bento-card:hover {
+  border-color: #CBD5E1;
+}
+
+/* Professional buttons */
+.pill-button-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  background-color: #0F172A;
+  color: #FFFFFF;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 0.4rem 0.875rem;
+  font-size: 0.75rem;
+  transition: all 0.15s ease-in-out;
+}
+
+.pill-button-primary:hover {
+  background-color: #1E293B;
+}
+
+.pill-button-primary:active {
+  transform: translateY(0);
+}
+
+.pill-button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  background-color: #FFFFFF;
+  color: #1E293B;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid #E2E8F0;
+  padding: 0.4rem 0.875rem;
+  font-size: 0.75rem;
+  transition: all 0.15s ease-in-out;
+}
+
+.pill-button-secondary:hover {
+  background-color: #F8FAFC;
+  border-color: #CBD5E1;
+}
